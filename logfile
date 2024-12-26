@@ -1,0 +1,169 @@
+2024-12-23 11:13:46.639 +03 [28909] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin24.1.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2024-12-23 11:13:46.640 +03 [28909] LOG:  could not bind IPv6 address "::1": Address already in use
+2024-12-23 11:13:46.640 +03 [28909] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2024-12-23 11:13:46.640 +03 [28909] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-12-23 11:13:46.640 +03 [28909] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2024-12-23 11:13:46.640 +03 [28909] WARNING:  could not create listen socket for "localhost"
+2024-12-23 11:13:46.640 +03 [28909] FATAL:  could not create any TCP/IP sockets
+2024-12-23 11:13:46.640 +03 [28909] LOG:  database system is shut down
+2024-12-23 11:13:54.534 +03 [29098] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin24.1.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2024-12-23 11:13:54.535 +03 [29098] LOG:  could not bind IPv6 address "::1": Address already in use
+2024-12-23 11:13:54.535 +03 [29098] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2024-12-23 11:13:54.535 +03 [29098] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2024-12-23 11:13:54.535 +03 [29098] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2024-12-23 11:13:54.535 +03 [29098] WARNING:  could not create listen socket for "localhost"
+2024-12-23 11:13:54.535 +03 [29098] FATAL:  could not create any TCP/IP sockets
+2024-12-23 11:13:54.535 +03 [29098] LOG:  database system is shut down
+2024-12-23 11:15:52.765 +03 [30167] LOG:  starting PostgreSQL 14.15 (Homebrew) on aarch64-apple-darwin24.1.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.4), 64-bit
+2024-12-23 11:15:52.766 +03 [30167] LOG:  listening on IPv6 address "::1", port 5433
+2024-12-23 11:15:52.766 +03 [30167] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2024-12-23 11:15:52.767 +03 [30167] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2024-12-23 11:15:52.769 +03 [30168] LOG:  database system was shut down at 2024-12-23 11:12:51 +03
+2024-12-23 11:15:52.771 +03 [30167] LOG:  database system is ready to accept connections
+2024-12-23 11:21:14.228 +03 [33039] FATAL:  database "commencis_ai" does not exist
+2024-12-23 11:22:16.203 +03 [33713] FATAL:  database "commencis_ai" does not exist
+2024-12-23 11:26:32.657 +03 [36157] FATAL:  database "commencis_ai" does not exist
+2024-12-23 11:28:04.006 +03 [36929] FATAL:  database "commencis_ai" does not exist
+2024-12-24 16:22:44.437 +03 [53971] ERROR:  relation "analysis" already exists
+2024-12-24 16:22:44.437 +03 [53971] STATEMENT:  
+	CREATE TABLE analysis (
+		row_id SERIAL NOT NULL, 
+		task_key VARCHAR NOT NULL, 
+		epic_name VARCHAR, 
+		description TEXT NOT NULL, 
+		contained_task_keys TEXT[] DEFAULT '{}' NOT NULL, 
+		created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		is_updated BOOLEAN DEFAULT false, 
+		PRIMARY KEY (row_id), 
+		CONSTRAINT analysis_task_key_unique UNIQUE (task_key), 
+		CONSTRAINT analysis_task_key_not_empty CHECK (task_key IS NOT NULL AND trim(task_key) != '')
+	)
+	
+	
+2024-12-24 16:22:58.346 +03 [54265] ERROR:  relation "analysis" already exists
+2024-12-24 16:22:58.346 +03 [54265] STATEMENT:  
+	CREATE TABLE analysis (
+		row_id SERIAL NOT NULL, 
+		task_key VARCHAR NOT NULL, 
+		epic_name VARCHAR, 
+		description TEXT NOT NULL, 
+		contained_task_keys TEXT[] DEFAULT '{}' NOT NULL, 
+		created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		is_updated BOOLEAN DEFAULT false, 
+		PRIMARY KEY (row_id), 
+		CONSTRAINT analysis_task_key_unique UNIQUE (task_key), 
+		CONSTRAINT analysis_task_key_not_empty CHECK (task_key IS NOT NULL AND trim(task_key) != '')
+	)
+	
+	
+2024-12-24 16:24:16.377 +03 [55152] ERROR:  relation "analysis" already exists
+2024-12-24 16:24:16.377 +03 [55152] STATEMENT:  
+	CREATE TABLE analysis (
+		row_id SERIAL NOT NULL, 
+		task_key VARCHAR NOT NULL, 
+		epic_name VARCHAR, 
+		description TEXT NOT NULL, 
+		contained_task_keys TEXT[] DEFAULT '{}' NOT NULL, 
+		created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		is_updated BOOLEAN DEFAULT false, 
+		PRIMARY KEY (row_id), 
+		CONSTRAINT analysis_task_key_unique UNIQUE (task_key), 
+		CONSTRAINT analysis_task_key_not_empty CHECK (task_key IS NOT NULL AND trim(task_key) != '')
+	)
+	
+	
+2024-12-24 16:28:59.530 +03 [57847] ERROR:  relation "analysis" already exists
+2024-12-24 16:28:59.530 +03 [57847] STATEMENT:  
+	CREATE TABLE analysis (
+		row_id SERIAL NOT NULL, 
+		task_key VARCHAR NOT NULL, 
+		epic_name VARCHAR, 
+		description TEXT NOT NULL, 
+		contained_task_keys TEXT[] DEFAULT '{}' NOT NULL, 
+		created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		is_updated BOOLEAN DEFAULT false, 
+		PRIMARY KEY (row_id), 
+		CONSTRAINT analysis_task_key_unique UNIQUE (task_key), 
+		CONSTRAINT analysis_task_key_not_empty CHECK (task_key IS NOT NULL AND trim(task_key) != '')
+	)
+	
+	
+2024-12-24 16:29:07.670 +03 [57891] ERROR:  relation "analysis" already exists
+2024-12-24 16:29:07.670 +03 [57891] STATEMENT:  
+	CREATE TABLE analysis (
+		row_id SERIAL NOT NULL, 
+		task_key VARCHAR NOT NULL, 
+		epic_name VARCHAR, 
+		description TEXT NOT NULL, 
+		contained_task_keys TEXT[] DEFAULT '{}' NOT NULL, 
+		created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		is_updated BOOLEAN DEFAULT false, 
+		PRIMARY KEY (row_id), 
+		CONSTRAINT analysis_task_key_unique UNIQUE (task_key), 
+		CONSTRAINT analysis_task_key_not_empty CHECK (task_key IS NOT NULL AND trim(task_key) != '')
+	)
+	
+	
+2024-12-24 16:29:53.111 +03 [58402] ERROR:  relation "analysis" already exists
+2024-12-24 16:29:53.111 +03 [58402] STATEMENT:  
+	CREATE TABLE analysis (
+		row_id SERIAL NOT NULL, 
+		task_key VARCHAR NOT NULL, 
+		epic_name VARCHAR, 
+		description TEXT NOT NULL, 
+		contained_task_keys TEXT[] DEFAULT '{}' NOT NULL, 
+		created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		is_updated BOOLEAN DEFAULT false, 
+		PRIMARY KEY (row_id), 
+		CONSTRAINT analysis_task_key_unique UNIQUE (task_key), 
+		CONSTRAINT analysis_task_key_not_empty CHECK (task_key IS NOT NULL AND trim(task_key) != '')
+	)
+	
+	
+2024-12-24 17:00:45.817 +03 [76032] ERROR:  relation "analysis" already exists
+2024-12-24 17:00:45.817 +03 [76032] STATEMENT:  
+	CREATE TABLE analysis (
+		row_id SERIAL NOT NULL, 
+		task_key VARCHAR NOT NULL, 
+		epic_name VARCHAR, 
+		description TEXT NOT NULL, 
+		contained_task_keys TEXT[] DEFAULT '{}' NOT NULL, 
+		created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, 
+		is_updated BOOLEAN DEFAULT false, 
+		PRIMARY KEY (row_id), 
+		CONSTRAINT analysis_task_key_unique UNIQUE (task_key), 
+		CONSTRAINT analysis_task_key_not_empty CHECK (task_key IS NOT NULL AND trim(task_key) != '')
+	)
+	
+	
+2024-12-25 17:58:58.062 +03 [77619] ERROR:  invalid input syntax for type integer: "BERK-2" at character 412
+2024-12-25 17:58:58.062 +03 [77619] STATEMENT:  SELECT analysis.row_id AS analysis_row_id, analysis.task_key AS analysis_task_key, analysis.epic_name AS analysis_epic_name, analysis.description AS analysis_description, analysis.contained_task_keys AS analysis_contained_task_keys, analysis.created_at AS analysis_created_at, analysis.updated_at AS analysis_updated_at, analysis.is_updated AS analysis_is_updated 
+	FROM analysis 
+	WHERE analysis.row_id IN ('1', 'BERK-2')
+2024-12-25 17:59:25.494 +03 [77619] ERROR:  invalid input syntax for type integer: "BERK-2" at character 412
+2024-12-25 17:59:25.494 +03 [77619] STATEMENT:  SELECT analysis.row_id AS analysis_row_id, analysis.task_key AS analysis_task_key, analysis.epic_name AS analysis_epic_name, analysis.description AS analysis_description, analysis.contained_task_keys AS analysis_contained_task_keys, analysis.created_at AS analysis_created_at, analysis.updated_at AS analysis_updated_at, analysis.is_updated AS analysis_is_updated 
+	FROM analysis 
+	WHERE analysis.row_id IN ('1', 'BERK-2')
+2024-12-25 18:07:33.502 +03 [80184] ERROR:  invalid input syntax for type integer: "BERK-2" at character 412
+2024-12-25 18:07:33.502 +03 [80184] STATEMENT:  SELECT analysis.row_id AS analysis_row_id, analysis.task_key AS analysis_task_key, analysis.epic_name AS analysis_epic_name, analysis.description AS analysis_description, analysis.contained_task_keys AS analysis_contained_task_keys, analysis.created_at AS analysis_created_at, analysis.updated_at AS analysis_updated_at, analysis.is_updated AS analysis_is_updated 
+	FROM analysis 
+	WHERE analysis.row_id IN ('1', 'BERK-2')
+2024-12-25 18:14:07.606 +03 [86178] ERROR:  invalid input syntax for type integer: "BERK-2" at character 412
+2024-12-25 18:14:07.606 +03 [86178] STATEMENT:  SELECT analysis.row_id AS analysis_row_id, analysis.task_key AS analysis_task_key, analysis.epic_name AS analysis_epic_name, analysis.description AS analysis_description, analysis.contained_task_keys AS analysis_contained_task_keys, analysis.created_at AS analysis_created_at, analysis.updated_at AS analysis_updated_at, analysis.is_updated AS analysis_is_updated 
+	FROM analysis 
+	WHERE analysis.row_id IN ('1', 'BERK-2')
+2024-12-25 18:19:17.738 +03 [89203] ERROR:  invalid input syntax for type integer: "BERK-2" at character 412
+2024-12-25 18:19:17.738 +03 [89203] STATEMENT:  SELECT analysis.row_id AS analysis_row_id, analysis.task_key AS analysis_task_key, analysis.epic_name AS analysis_epic_name, analysis.description AS analysis_description, analysis.contained_task_keys AS analysis_contained_task_keys, analysis.created_at AS analysis_created_at, analysis.updated_at AS analysis_updated_at, analysis.is_updated AS analysis_is_updated 
+	FROM analysis 
+	WHERE analysis.row_id IN ('1', 'BERK-2')
+2024-12-26 10:14:00.504 +03 [30167] LOG:  received smart shutdown request
+2024-12-26 10:14:00.507 +03 [30167] LOG:  background worker "logical replication launcher" (PID 30174) exited with exit code 1
+2024-12-26 10:14:00.508 +03 [30169] LOG:  shutting down
+2024-12-26 10:14:00.533 +03 [30167] LOG:  database system is shut down
